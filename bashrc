@@ -142,3 +142,4 @@ alias shw="startx /usr/local/bin/desktop-session herbstluftwm"
 
 #stop more than one instance of volumeicon running:
 alias volumeicon="pidof volumeicon || volumeicon &"
+alias dotsync='cd ~/system/dotfiles && git add . && git commit -m "Auto-update configurations: $(date +"%Y-%m-%d %H:%M")" && git push'
