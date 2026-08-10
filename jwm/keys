@@ -113,6 +113,12 @@
 <Key mask="4" key="2">exec:wingrid-topright.sh</Key>
 
 
+<!-- Vim-Style Window Quadrants (U=TopLeft, I=TopRight, J=BottomLeft, K=BottomRight) -->
+<Key mask="4" key="u">exec:xdotool windowsize $(xdotool getactivewindow) 50% 50% windowmove $(xdotool getactivewindow) 0 0</Key>
+<Key mask="4" key="i">exec:xdotool windowsize $(xdotool getactivewindow) 50% 50% windowmove $(xdotool getactivewindow) 50% 0</Key>
+<Key mask="4" key="h">exec:xdotool windowsize $(xdotool getactivewindow) 50% 45% windowmove $(xdotool getactivewindow) 0 50%</Key>
+<Key mask="4" key="k">exec:xdotool windowsize $(xdotool getactivewindow) 50% 50% windowmove $(xdotool getactivewindow) 50% 50%</Key>
+
 
 </JWM>
 
