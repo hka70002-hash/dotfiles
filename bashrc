@@ -149,6 +149,10 @@ alias dotsync="cd ~/system/dotfiles && git add . && git commit -m 'Auto-update' 
 # Enable native vim mode and mode strings
 set -o vi
 bind 'set show-mode-in-prompt on'
-bind 'set vi-ins-mode-string "(ins) "'
-bind 'set vi-cmd-mode-string "(cmd) "'
-PS1='workk@Humble:\w\$ '
+bind 'set vi-ins-mode-string "\1\e[32;1m\2[INS]\1\e[0m\2 "'
+bind 'set vi-cmd-mode-string "\1\e[33;1m\2[NOR]\1\e[0m\2 "'
+
+# Clean, professional colored prompt (Blue username, Cyan folder path)
+PS1='\[\e[34;1m\]\u@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[0m\]\$ '
+
+
