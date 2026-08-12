@@ -155,4 +155,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboar
 
 -- External Utilities
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Launch tmux-sessionizer" })
+vim.keymap.set("n", "<leader>ca", "<cmd>e ~/.config/alacritty/alacritty.toml<CR>", { desc = "Edit Alacritty config" })
+
 
