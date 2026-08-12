@@ -155,4 +155,4 @@ bind 'set vi-cmd-mode-string "\1\e[33;1m\2[NOR]\1\e[0m\2 "'
 # Clean, professional colored prompt (Blue username, Cyan folder path)
 PS1='\[\e[34;1m\]\u@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[0m\]\$ '
 
-
+source /usr/share/doc/fzf/examples/key-bindings.bash
