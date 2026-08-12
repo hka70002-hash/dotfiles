@@ -94,7 +94,7 @@
 <!-- <Key keycode="148">exec:galculator</Key> -->
 
  <!-- 1. Open Terminal Shortcut -->
-    <Key mask="CA" key="t">exec roxterm</Key>
+    <Key mask="CA" key="t">exec:alacritty</Key>
 
     <!-- 2. Toggle WiFi On Shortcut -->
     <Key mask="A" key="o">exec desktop-defaults-run -t bash -c "sudo /etc/init.d/connman start && connmanctl enable wifi"</Key>
