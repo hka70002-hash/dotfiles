@@ -132,9 +132,11 @@
 
 
 Key mask="4S" key="w">exec:~/setup_workspace.sh</Key>
+<Key mask="CA" key="f">exec:firefox</Key>
+<Key mask="CA" key="z">exec:zathura</Key>
 
-Key "Ctrl+Alt+f" firefox
-Key "Ctrl+Alt+z" zathura
+
+
 
 </JWM>
 
