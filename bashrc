@@ -156,3 +156,31 @@ bind 'set vi-cmd-mode-string "\1\e[33;1m\2[NOR]\1\e[0m\2 "'
 PS1='\[\e[34;1m\]\u@\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[0m\]\$ '
 
 source /usr/share/doc/fzf/examples/key-bindings.bash
+
+
+
+bat-time() {
+    echo "Monitoring battery drain... (Please wait 20 seconds)"
+    C1=$(cat /sys/class/power_supply/BAT1/charge_now)
+    sleep 20
+    C2=$(cat /sys/class/power_supply/BAT1/charge_now)
+    
+    DROP=$((C1 - C2))
+    
+    if [ $DROP -gt 0 ]; then
+        # Calculates consumption over the 20-second window
+        RATE=$((DROP / 20))
+        REM_SEC=$((C2 / RATE))
+        HOURS=$((REM_SEC / 3600))
+        MINS=$(((REM_SEC % 3600) / 60))
+        PCT=$(cat /sys/class/power_supply/BAT1/capacity)
+        echo "======================================"
+        echo " Battery Status: $PCT%"
+        echo " Time Remaining: ${HOURS}h ${MINS}m"
+        echo "======================================"
+    elif [ "$(cat /sys/class/power_supply/BAT1/status)" = "Charging" ]; then
+        echo "The battery is currently charging on AC power."
+    else
+        echo "No power drop detected in 20 seconds. Try running a heavier application and test again."
+    fi
+}

@@ -119,6 +119,22 @@
 <Key mask="4" key="h">exec:xdotool windowsize $(xdotool getactivewindow) 50% 45% windowmove $(xdotool getactivewindow) 0 50%</Key>
 <Key mask="4" key="k">exec:xdotool windowsize $(xdotool getactivewindow) 50% 50% windowmove $(xdotool getactivewindow) 50% 50%</Key>
 
+<!-- Snap Firefox perfectly to the left half of the Dell monitor (accounting for borders) -->
+<Key mask="4" key="f">exec:xdotool windowsize $(xdotool getactivewindow) 675 725 windowmove $(xdotool getactivewindow) 0 0</Key>
+
+<!-- Snap Zathura perfectly to the right half of the Dell monitor (accounting for borders) -->
+<Key mask="4" key="z">exec:xdotool windowsize $(xdotool getactivewindow) 675 725 windowmove $(xdotool getactivewindow) 683 0</Key>
+
+
+
+<!-- Launch or move active terminal/tmux to full screen on the laptop -->
+<Key mask="4" key="t">exec:xdotool windowmove $(xdotool getactivewindow) 1366 0 windowsize $(xdotool getactivewindow) 1366 768</Key>
+
+
+Key mask="4S" key="w">exec:~/setup_workspace.sh</Key>
+
+Key "Ctrl+Alt+f" firefox
+Key "Ctrl+Alt+z" zathura
 
 </JWM>
 
